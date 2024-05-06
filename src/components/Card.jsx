@@ -71,7 +71,9 @@ const Card = ({
           )}
         </footer>
       </div>
-      <button className="btn">Easy Apply</button>
+      <div className="buttonContainer">
+        <button className="btn">Easy Apply 🔗</button>
+      </div>
     </div>
   );
 };

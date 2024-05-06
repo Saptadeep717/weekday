@@ -8,7 +8,7 @@ function App() {
   const [offset, setOffset] = useState(0)
   const [loading, setLoading] = useState(false)
   const [fitItem]=useState("")
-
+  const [innerHeight, setInnerHeight] = useState(800);
   const dispatch = useDispatch();
 
   const FetchPosts = async () => {
@@ -43,20 +43,30 @@ function App() {
     FetchPosts();
   }, [offset])
 
+  useEffect(() => {
+    setInnerHeight(window.innerHeight);
+  },[window.innerHeight])
+
  
 
   const handleScroll = (e) => {
     const { scrollTop, clientHeight, scrollHeight } = e.currentTarget;
+    //console.log(scrollTop + "------" + clientHeight +"------"+ scrollHeight);
     if (scrollTop + clientHeight >= scrollHeight - 100 && !loading) {
       setOffset(offset + 10)
      
     }
   }
-  return (
-    <div style={{ height: "800px", overflowY: "scroll" }} onScroll={handleScroll}>
+  return ( <>
+
+  
+   
+    <div style={{ height: innerHeight+"px", overflowY: "scroll" }} onScroll={handleScroll}>
+     
       <h1>Candidate Application Platform</h1>
       <Jobs/>
     </div>
+    </>
   );
 }
 
