@@ -43,8 +43,9 @@ const Card = ({
         <body className="body">
           <div className="salary">
             {`Estimated Salary: ${
-              minJdSalary
-                ? `$${minJdSalary} - ${maxJdSalary}`
+              minJdSalary && maxJdSalary
+                ? `$${minJdSalary} - ${maxJdSalary}` : 
+                minJdSalary && !maxJdSalary ? `min $${minJdSalary}` 
                 : ` max $${maxJdSalary}`
             } ✅`}
           </div>

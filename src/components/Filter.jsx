@@ -45,8 +45,7 @@ const Filter = ({ jobList, setJobList }) => {
   function filterData() {
     if (minBaseSalary) {
       minBsSal(posts);
-    } 
-    else if (location) {
+    } else if (location) {
       locationFind(posts);
     }
 
@@ -55,8 +54,7 @@ const Filter = ({ jobList, setJobList }) => {
     }
     if (minExperience) {
       minExp(posts);
-    } 
-    else if (companyName) {
+    } else if (companyName) {
       comName(posts);
     }
   }
@@ -149,15 +147,6 @@ const Filter = ({ jobList, setJobList }) => {
   return (
     <div className="filterContainer">
       <div>
-        <input
-          className="searchBar"
-          type="search"
-          placeholder="Search By Company..."
-          value={companyName}
-          onChange={(e) => handleCompanyName(e)}
-        />
-      </div>
-      <div>
         <Select
           options={expValueOptions}
           value={minExperience}
@@ -237,6 +226,15 @@ const Filter = ({ jobList, setJobList }) => {
               color: "black",
             }),
           }}
+        />
+      </div>
+      <div>
+        <input
+          className="searchBar"
+          type="search"
+          placeholder="Search By Company..."
+          value={companyName}
+          onChange={(e) => handleCompanyName(e)}
         />
       </div>
     </div>
