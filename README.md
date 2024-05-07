@@ -3,7 +3,7 @@
 git clone https://github.com/Saptadeep717/weekday
 
 
-2. Navigate the project directory\
+2. Navigate the project directory/
 
 cd weekday
 
