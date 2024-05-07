@@ -18,9 +18,9 @@ You may also see any lint errors in the console.
 
 install the following dependecies
 
-npm i react-redux
-npm i redux
-npm i react-select
+npm i react-redux\
+npm i redux\
+npm i react-select\
 npm i @reduxjs/toolkit
 
 
