@@ -1,0 +1,26 @@
+.filterContainer{
+    background-color:#fdfdfd;
+   display: flex;
+   gap:1.7rem;
+   padding: 0.7rem;
+   justify-content: center;
+   align-items: center;
+}
+
+.searchBar{
+    padding: 0.6rem;
+    border: 1px gray;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    outline:none;
+}
+
+.searchBar{
+    font-size: 1rem;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    outline: none;
+  }
+  .searchBar:focus {
+      border: 1px solid #4944d6;
+  }

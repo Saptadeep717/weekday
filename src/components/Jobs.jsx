@@ -1,19 +1,17 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
+import Filter from "./Filter";
 import { useSelector } from "react-redux";
 
 const Jobs = () => {
-  const [jobList, setJobList] = useState([]);
-
   const posts = useSelector((state) => state.getAllJobList.jobList);
-  useEffect(() => {
-    setJobList(posts);
-    console.log("133333+++++");
-  }, [posts]);
+  const [jobList, setJobList] = useState([]);
 
   return (
     <div>
-      <div className="filterContainer"></div>
+      <div>
+        <Filter jobList={jobList} setJobList={setJobList} />
+      </div>
       <div className="cardsContainer">
         {jobList &&
           jobList.map((job, index) => {
