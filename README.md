@@ -1,11 +1,11 @@
 ### `Installation`
 1. Clone the repository:\
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/Saptadeep717/weekday
 
 
-2. Navigate the project directory`
+2. Navigate the project directory\
 
-cd your-repository
+cd weekday
 
 
 ### `Dependencies`
